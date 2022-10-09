@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+        body {
+            background-color: #F7D0A9;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <div id="soma">
+        <h3>Soma</h3>
+        <input type="number" id="soma1"> +
+        <input type="number" id="soma2">
+        <input type="button" value="Somar" onclick="soma()">
+
+        <div id="ressoma">Resultado: </div>
+    </div>
+
+    <br>
+    
+    <div id="subtracao">
+        <h3>Subtração</h3>
+        <input type="number" id="sub1"> -
+        <input type="number" id="sub2">
+        <input type="button" value="Subtrair" onclick="sub()">
+        <div id="ressub">Resultado: </div>
+    </div>
+
+    <br>
+
+    <div id="multiplicacao">
+        <h3>Multiplicação</h3>
+        <input type="number" id="multi1"> *
+        <input type="number" id="multi2">
+        <input type="button" value="Multiplicação" onclick="multi()">
+        <div id="resmulti">Resultado: </div>
+    </div>
+
+    <br>
+
+    <div id="divisao">
+        <h3>Divisão</h3>
+        <input type="number" id="divi1"> /
+        <input type="number" id="divi2">
+        <input type="button" value="Dividir" onclick="divi()">
+        <div id="resdivi">Resultado: </div>
+    </div>
+
+    <script>
+        //SOMA
+        function soma() {
+        var soma1 = window.document.getElementById('soma1')
+        var soma2 = window.document.getElementById('soma2')
+        var ressoma = window.document.getElementById('ressoma')
+
+        var sm1 = Number(soma1.value)
+        var sm2 = Number(soma2.value)
+
+        var r = sm1 + sm2
+
+        ressoma.innerHTML = `O resultado é ${r}`
+        }
+
+        //SUBTRAÇÃO
+        function sub() {
+            var subt1 = window.document.getElementById('sub1')
+            var subt2 = window.document.getElementById('sub2')
+            var ressub = window.document.getElementById('ressub')
+
+            var sub1 = Number(subt1.value)
+            var sub2 = Number(subt2.value)
+
+            var s = sub1 - sub2
+
+            ressub.innerHTML = `O resultado é ${s}`
+        }
+
+        //MULTIPLICAÇÃO
+          function multi() {
+            var mult1 = window.document.getElementById('multi1')
+            var mult2 = window.document.getElementById('multi2')
+            var resmulti = window.document.getElementById('resmulti')
+
+            var m1 = Number(mult1.value)
+            var m2 = Number(mult2.value)
+
+            var d = m1 * m2
+
+            resmulti.innerHTML = `O resultado é ${d}`
+        }
+
+        //DIVISÃO
+        function divi() {
+            var divi1 = window.document.getElementById('divi1')
+            var divi2 = window.document.getElementById('divi2')
+            var resdivi = window.document.getElementById('resdivi')
+
+            var d1 = Number(divi1.value)
+            var d2 = Number(divi2.value)
+
+            var u = d1 / d2
+
+            resdivi.innerHTML = `O resultado é ${u}`
+        }
+
+
+    </script>
+</body>
+</html>
